@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class RegionListController: UITableViewController {
 	var regions: [Region] = [] {
 		didSet {
@@ -17,13 +16,13 @@ class RegionListController: UITableViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
-		tableView.rowHeight = 55
+      
 
 		let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(tableViewPanned(_:)))
 		panRecognizer.delegate = self
 		tableView.addGestureRecognizer(panRecognizer)
 	}
+   
 
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)

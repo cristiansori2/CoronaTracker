@@ -9,6 +9,7 @@
 import UIKit
 import NotificationCenter
 
+
 class TodayViewController: UIViewController, NCWidgetProviding {
 	static let numberPercentSwitchInterval: TimeInterval = 3 /// Seconds
 
@@ -30,7 +31,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
+        
+        
         initializeView()
 
 		DataManager.instance.load { [weak self] success in
@@ -38,7 +41,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 			self?.update()
 		}
     }
-
+    
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         activityIndicatorView.startAnimating()
 		updateTimeLabel.isHidden = true

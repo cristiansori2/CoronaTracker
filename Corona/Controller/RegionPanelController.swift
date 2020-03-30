@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class RegionPanelController: UIViewController {
 	private lazy var buttonDone: UIButton = {
 		let button = UIButton(type: .system)
@@ -64,7 +63,8 @@ class RegionPanelController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
+       
+        
 		if #available(iOS 13.0, *) {
 			effectViewBackground.effect = UIBlurEffect(style: .systemMaterial)
 			effectViewBackground.contentView.alpha = 0
@@ -86,6 +86,7 @@ class RegionPanelController: UIViewController {
 		regionListController.tableView.superview?.isHidden = true
 		regionListController.tableView.delegate = self
 	}
+   
 
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.destination is RegionDataController {
@@ -141,6 +142,8 @@ class RegionPanelController: UIViewController {
 
 extension RegionPanelController {
 	@IBAction func buttonSearchTapped(_ sender: Any) {
+        
+        
 		isSearching = true
 	}
 

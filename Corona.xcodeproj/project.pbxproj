@@ -72,9 +72,13 @@
 		11EB2C9D2413F7E9001769B2 /* CurrentChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB2C9C2413F7E9001769B2 /* CurrentChartView.swift */; };
 		11EB2C9F2413FFE1001769B2 /* HistoryChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB2C9E2413FFE1001769B2 /* HistoryChartView.swift */; };
 		11EB2CA1241400EF001769B2 /* TopChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB2CA0241400EF001769B2 /* TopChartView.swift */; };
+		17EE25E32430924B008CE5BB /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EE25DE24309248008CE5BB /* GoogleUtilities.framework */; };
+		17EE25E42430924B008CE5BB /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EE25DF2430924A008CE5BB /* GoogleMobileAds.framework */; };
+		17EE25E52430924B008CE5BB /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EE25E02430924B008CE5BB /* GoogleAppMeasurement.framework */; };
+		17EE25E62430924B008CE5BB /* Licenses in Resources */ = {isa = PBXBuildFile; fileRef = 17EE25E12430924B008CE5BB /* Licenses */; };
+		17EE25E72430924B008CE5BB /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EE25E22430924B008CE5BB /* nanopb.framework */; };
 		3447B4BB241E7631003914AF /* RegionListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195F19D241D2E7900FE718F /* RegionListController.swift */; };
 		3447B4BD241E7790003914AF /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447B4BC241E7790003914AF /* App.swift */; };
-		344ED322241AC7AA004C4EA8 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 344ED321241AC7AA004C4EA8 /* NotificationCenter.framework */; };
 		344ED32C241AC7AA004C4EA8 /* Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 344ED31F241AC7AA004C4EA8 /* Widget.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		344ED333241ACCC9004C4EA8 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344ED324241AC7AA004C4EA8 /* TodayViewController.swift */; };
 		CDA50DE0242C7D330055BE4A /* CSV in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 115186B3241FB00000EBC83E /* CSV */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -173,10 +177,15 @@
 		11EB2C9C2413F7E9001769B2 /* CurrentChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentChartView.swift; sourceTree = "<group>"; };
 		11EB2C9E2413FFE1001769B2 /* HistoryChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryChartView.swift; sourceTree = "<group>"; };
 		11EB2CA0241400EF001769B2 /* TopChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopChartView.swift; sourceTree = "<group>"; };
+		1788C13724308E87001B4DED /* Licenses */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Licenses; path = "../../Downloads/GoogleMobileAdsSdkiOS-7.57.0/Licenses"; sourceTree = "<group>"; };
+		17EE25DE24309248008CE5BB /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
+		17EE25DF2430924A008CE5BB /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		17EE25E02430924B008CE5BB /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		17EE25E12430924B008CE5BB /* Licenses */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Licenses; sourceTree = "<group>"; };
+		17EE25E22430924B008CE5BB /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
 		18CAD032242A5E1200CA1CEE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3447B4BC241E7790003914AF /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		344ED31F241AC7AA004C4EA8 /* Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		344ED321241AC7AA004C4EA8 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		344ED324241AC7AA004C4EA8 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		344ED329241AC7AA004C4EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,9 +195,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17EE25E42430924B008CE5BB /* GoogleMobileAds.framework in Frameworks */,
 				11BF32AA24156AE500270130 /* FloatingPanel in Frameworks */,
+				17EE25E72430924B008CE5BB /* nanopb.framework in Frameworks */,
 				115186B1241FAFF300EBC83E /* Disk in Frameworks */,
 				1195F1A5241EC1FB00FE718F /* Charts in Frameworks */,
+				17EE25E52430924B008CE5BB /* GoogleAppMeasurement.framework in Frameworks */,
+				17EE25E32430924B008CE5BB /* GoogleUtilities.framework in Frameworks */,
 				115186B4241FB00000EBC83E /* CSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,7 +211,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				115186B8241FB04200EBC83E /* CSV in Frameworks */,
-				344ED322241AC7AA004C4EA8 /* NotificationCenter.framework in Frameworks */,
 				115186B6241FB03F00EBC83E /* Disk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,7 +396,12 @@
 		344ED320241AC7AA004C4EA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				344ED321241AC7AA004C4EA8 /* NotificationCenter.framework */,
+				17EE25E02430924B008CE5BB /* GoogleAppMeasurement.framework */,
+				17EE25DF2430924A008CE5BB /* GoogleMobileAds.framework */,
+				17EE25DE24309248008CE5BB /* GoogleUtilities.framework */,
+				17EE25E12430924B008CE5BB /* Licenses */,
+				17EE25E22430924B008CE5BB /* nanopb.framework */,
+				1788C13724308E87001B4DED /* Licenses */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -457,7 +474,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = Samabox;
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					1162D127240D05F600647002 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -506,6 +523,7 @@
 				1186BC642429FCF800097E9E /* LaunchScreen.storyboard in Resources */,
 				117C84DA2427E3E200688459 /* Localizable.strings in Resources */,
 				1162D135240D05FA00647002 /* Assets.xcassets in Resources */,
+				17EE25E62430924B008CE5BB /* Licenses in Resources */,
 				1186BC652429FCF800097E9E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -732,17 +750,24 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Corona/App.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.4;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FS95R5R5HQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Corona/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.4;
-				PRODUCT_BUNDLE_IDENTIFIER = com.samabox.corona;
+				OTHER_LDFLAGS = "-ObjC ";
+				"OTHER_LDFLAGS[arch=*]" = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lem1s.corona;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
@@ -756,17 +781,23 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Corona/App.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.4;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FS95R5R5HQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Corona/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.4;
-				PRODUCT_BUNDLE_IDENTIFIER = com.samabox.corona;
+				OTHER_LDFLAGS = "-ObjC ";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lem1s.corona;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
@@ -779,14 +810,14 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FS95R5R5HQ;
 				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.samabox.corona.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lem1s.corona.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -799,14 +830,14 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FS95R5R5HQ;
 				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.samabox.corona.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lem1s.corona.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

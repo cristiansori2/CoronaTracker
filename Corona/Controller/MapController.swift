@@ -8,10 +8,10 @@
 
 import UIKit
 import MapKit
-
+import GoogleMobileAds
 import FloatingPanel
 
-class MapController: UIViewController {
+class MapController: UIViewController,GADInterstitialDelegate {
 	private static let cityZoomLevel = (UIScreen.main.bounds.width > 1000) ? CGFloat(5) : CGFloat(4)
 	private static let updateInterval: TimeInterval = 60 * 5 /// 5 mins
 
@@ -36,13 +36,19 @@ class MapController: UIViewController {
 	@IBOutlet var viewOptions: UIView!
 	@IBOutlet var effectViewOptions: UIVisualEffectView!
 	@IBOutlet var buttonMode: UIButton!
+    var interstitial: GADInterstitial!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
+      
 		MapController.instance = self
-
+      interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        let request = GADRequest()
+                     interstitial.load(request)
+        interstitial.delegate=self
 		initializeView()
+    
+        
 		initializeBottomSheet()
 
 		DataManager.instance.load { _ in
@@ -54,7 +60,7 @@ class MapController: UIViewController {
 			self.downloadIfNeeded()
 		}
 
-		checkForAppUpdate()
+		//checkForAppUpdate()
 	}
 
 	override func viewDidAppear(_ animated: Bool) {
@@ -74,7 +80,7 @@ class MapController: UIViewController {
 		effectViewOptions.layer.cornerRadius = 10
 		viewOptions.enableShadow()
 
-		buttonUpdate.layer.cornerRadius = buttonUpdate.bounds.height / 2
+	//	buttonUpdate.layer.cornerRadius = buttonUpdate.bounds.height / 2
 
 		if #available(iOS 13.0, *) {
 			effectView.effect = UIBlurEffect(style: .systemThinMaterial)
@@ -194,7 +200,7 @@ class MapController: UIViewController {
 			}
 		}
 	}
-
+/*
 	private func checkForAppUpdate() {
 		App.checkForAppUpdate { updateAvailable in
 			if updateAvailable {
@@ -204,7 +210,7 @@ class MapController: UIViewController {
 			}
 		}
 	}
-
+*/
 	@IBAction func buttonUpdateTapped(_ sender: Any) {
 		let alertController = UIAlertController.init(
 			title: L10n.App.newVersionTitle,
@@ -226,6 +232,13 @@ class MapController: UIViewController {
 	}
 
 	@IBAction func buttonModeTapped(_ sender: Any) {
+        
+      if interstitial.isReady {
+               interstitial.present(fromRootViewController: self)
+             } else {
+               print("Ad wasn't ready")
+             }
+        
 		Menu.show(above: self, sourceView: buttonMode, width: 150, items: [
 			MenuItem(title: L10n.Case.confirmed, image: nil, selected: mode == .confirmed, action: {
 				self.mode = .confirmed

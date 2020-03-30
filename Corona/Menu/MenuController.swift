@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class MenuController: UITableViewController {
 	let items: [MenuItem]
@@ -25,6 +26,7 @@ class MenuController: UITableViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        
 
 		tableView.isScrollEnabled = false
 		tableView.showsVerticalScrollIndicator = false
@@ -37,7 +39,7 @@ class MenuController: UITableViewController {
 		preferredContentSize = CGSize(width: width,
 									  height: tableView.rowHeight * CGFloat(items.count) - 1)
 	}
-
+    
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		items.count
 	}
